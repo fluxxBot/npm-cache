@@ -20,4 +20,4 @@ pipelines:
             - cd sample-node-project
             - npm cache verify
             - npm install
-            - npm verify cache
+            - npm cache verify
