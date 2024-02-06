@@ -16,7 +16,7 @@ pipelines:
             - echo "onStart can be used to do some setup or initialization of your dependencies to prepare for the execution."
           onExecute:
             - echo "onExecute is the main section where you would issue your build/test commands"
-            - git clone git@github.com:acemilyalcin/sample-node-project.git
+            - git clone https://github.com/acemilyalcin/sample-node-project.git
             - cd sample-node-project
             - npm verify cache
             - npm install
