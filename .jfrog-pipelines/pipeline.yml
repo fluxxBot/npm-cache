@@ -18,6 +18,6 @@ pipelines:
             - echo "onExecute is the main section where you would issue your build/test commands"
             - git clone https://github.com/acemilyalcin/sample-node-project.git
             - cd sample-node-project
-            - npm verify cache
+            - npm cache verify
             - npm install
             - npm verify cache
