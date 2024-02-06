@@ -1,0 +1,23 @@
+pipelines:
+  - name: test_cache
+    steps:
+      - name: first
+        type: Bash
+        configuration:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: node
+                versions:
+                  - "14.19.1"
+        execution:
+          onStart:
+            - echo "onStart can be used to do some setup or initialization of your dependencies to prepare for the execution."
+          onExecute:
+            - echo "onExecute is the main section where you would issue your build/test commands"
+            - git clone git@github.com:acemilyalcin/sample-node-project.git
+            - cd sample-node-project
+            - npm verify cache
+            - npm install
+            - npm verify cache
